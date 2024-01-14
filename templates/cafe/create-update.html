@@ -1,0 +1,22 @@
+
+{% extends "base.html" %}
+
+{ % block content % } 
+
+{% if message %}
+<p>{% message%}</p>
+
+{% end if %}
+<div style="margin-top: 30px;">
+    <form action="." method="POST">
+        {%csrf_token%}
+        <button style="margin-top: 30px" type="submit">Submit</button>
+        {% else %}
+        
+    </form>
+</div>
+
+{% endblock %}
+
+
+    

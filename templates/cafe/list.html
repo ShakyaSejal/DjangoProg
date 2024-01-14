@@ -1,0 +1,29 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+ <!-- <h1> {{ object.name }} </h1> -->
+<p> {{ object.description }} </p>
+<p> {{ object.direction }} </p>
+<p> {{ object.price }} </p>
+{% for ingridents in object.recipeingridents_set.all%}
+    <h1> {{ ingridents.name }} </h1>
+    <p> {{ ingridents.as_imperial }} </p>
+    <p> {{ ingridents.direction }} </p>
+
+    <h1>My recipes</h1>
+<a href='{ % url "cafe:create" %}'>Add Recipe</a>
+
+<ul>
+    {% for x in object_list %}
+
+         <li><a href="{{x.get_absolute_url}}/">{{x.name}}</li>
+
+{% endblock%}
+
+
+
+{% endfor%}
+</ul>
+    
+{% endblock %}
