@@ -10,13 +10,12 @@
 
   <p>{{object.description}}</p>
   <p>{{object.direction}}</p>
-  {% for ingridents in object.get_ingridents_children %}
-  <h1> {{ ingridents.name }} </h1>
-  <p> {{ ingridents.as_imperial }} </p>
-  <p> {{ ingridents.direction }} </p>
+  {% for ingredients in object.get_ingredients_children %}
+    <h1> {{ ingredients.name }} </h1>
+    <!-- <p> {{ ingridents.as_imperial }} </p> -->
+    <p> {{ ingredients.direction }} </p>
+    {% endfor %}
   {% endblock %}
 
 
 
-
-{% endblock%}

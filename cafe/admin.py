@@ -13,9 +13,9 @@ class RecipeInline(admin.StackedInline):
     extra = 0
 
 class RecipeAdmin(admin.ModelAdmin):
-    list_display = ['id','name','user']
-    readonly_fields = ['created','updated']
-    raw_id_fields = ['user']
+    list_display = ["id","name","user"]
+    readonly_fields = ["create","update"]
+    raw_id_fields = ["user"]
 admin.site.register(RecipeIngredients)
 
 
